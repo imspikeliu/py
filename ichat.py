@@ -14,7 +14,7 @@ while 1:  # 无限循环
     now = datetime.datetime.now()  # 获取当前时间datetime.datetime(2019, 6, 13, 15, 7, 30, 443310)
     now_str = now.strftime('%Y/%m/%d %H:%M:%S')[11:]  # 格式化时间并截取11位后面的时间(2019/06/13 15:11:53)
     print('\r{}'.format(now_str), end='')  # 显示时间，使用format格式化函数
-if now_str in ['15:46:00']:
+if now_str in ['16:20:00']:
     itchat.send('Hi，妹子，下午好！久坐伤身哦，去接杯水，顺便走动走动吧！', toUserName=userName)
 if now_str in ['17:00:00']:
     itchat.send('快要下班啦，工作做完了吗？做完了就看点资料学习下吧，放松放松！', toUserName=userName)
