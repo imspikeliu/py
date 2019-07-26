@@ -1,12 +1,13 @@
 # - * - coding:utf-8 - * - 定义代码的编码格式，Python代码都需要申明
 # 首先，导入相关的功能模块
-import itchat  # 导入封装好的微信模块
-import datetime  # 导入时间模块，用于处理时间
-import time  # 导入时间模块，用于处理时间，这两个模块都是处理时间，只是功能有差异
+import itchat       # 导入封装好的微信模块
+import datetime     # 导入时间模块，用于处理时间
+import time         # 导入时间模块，用于处理时间
 
-# 然后生成二维码，登录微信，找到指定的好友
+# 生成二维码，登录微信，找到指定的好友
 itchat.auto_login(hotReload=True)  # 登录微信，hotReload=True是避免每次都扫码登录
-user = itchat.search_friends(name=u'Xu')  # 找到发送消息的好友，昵称即可
+user = itchat.search_friends(name=u'Xu')  # 找到发送消息的好友，昵称即可，u'':字符串以Unicode编码
+print(user)
 userName = user[0]['UserName']  # user是个列表，从列表中获取用户名
 
 # 最后，写个循环，在指定时间给好友发送消息
