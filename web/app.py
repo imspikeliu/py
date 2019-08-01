@@ -10,6 +10,7 @@ app = Flask(__name__) # 实例化1个app
 def home():
     return '<h1>Home</h1>'
 
+# 登录表单
 @app.route('/signin', methods=['GET'])
 def signin_form():
     return '''<form action="/signin" method="post">
@@ -18,6 +19,7 @@ def signin_form():
               <p><button type="submit">Sign In</button></p>
               </form>'''
 
+# 登录
 @app.route('/signin', methods=['POST'])
 def signin():
     # 需要从request对象读取表单内容
