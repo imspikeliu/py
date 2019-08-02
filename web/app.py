@@ -1,7 +1,7 @@
 # -*- coding:utf-8 -*-
 
-from flask import Flask
-from flask import request
+from flask import Flask # Web框架
+from flask import request 
 
 app = Flask(__name__) # 实例化1个app
 
