@@ -9,7 +9,7 @@ app = Flask(__name__) # 实例化1个app
 # 首页
 @app.route('/', methods=['GET', 'POST'])
 def home():
-    return render_template('home.html')
+    return render_template('home.html', page_list=[1, 2, 3, 4, 5])
     
 # 注册页面
 @app.route('/signin', methods=['GET'])
