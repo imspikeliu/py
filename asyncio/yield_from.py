@@ -2,15 +2,25 @@
 
 # 这个案例演示yield和yield from的区别
 
-def generator_1(titles):
-    yield titles
+def gen_1(title):
+    yield title
 
-def generator_2(titiles):
-    yield from titiles
+def gen_2(title):
+    yield from title
 
-titles = ['python', 'java', 'c++']
-for title in generator_1(titles):
-    print('生成器1：', title)
+title = ['php', 'python', 'java']
 
-for title in generator_2(titles):
-    print('生成器2：', title)
+for x in gen_1(title):
+    print(x)
+
+for x in gen_2(title):
+    print(x)
+
+
+b = b'aaa'
+print(type(b))
+
+print(b'aaa'.decode())
+
+str = 'aaa'
+print(str.encode('utf-8'))

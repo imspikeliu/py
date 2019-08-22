@@ -21,23 +21,15 @@ print(a)
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+SELECT
+	*　 
+FROM
+	student s
+	RIGHT JOIN classes c ON s.class_id = c.id
+	
+	
+SELECT
+	* 
+FROM
+	student s
+	RIGHT JOIN classes c ON s.class_id = c.id
